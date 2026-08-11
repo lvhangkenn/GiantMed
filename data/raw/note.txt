@@ -1,0 +1,1 @@
+Place the MIMIC data files in this directory.
