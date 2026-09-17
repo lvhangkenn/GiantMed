@@ -567,7 +567,6 @@ if __name__ == '__main__':
     cid2atc6_file = root + "drug-atc.csv"
     ndc2RXCUI_file = root + "ndc2RXCUI.txt"
     ddi_file = root + "drug-DDI.csv"
-    drugbankinfo = root + "drugbank_drugs_info.csv"
     med_structure_file = root + "idx2SMILES.pkl"
 
     # output file
