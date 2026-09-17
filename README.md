@@ -23,11 +23,7 @@
 
 ## Abstract
 
-Accurate and safe medication recommendations from Electronic Health Records (EHRs) are essential for clinical decision support. While Large Language Models (LLMs) have shown strong semantic reasoning capabilities in healthcare, they tend to make coarse binary predictions, overlooking medications near the decision boundary and leading to overprescription. In contrast, deep models offer fine-grained probability outputs but lack the contextual reasoning needed for complex boundary cases.
-
-We propose GiantMed, a boundary-aware medication recommendation framework that activates LLM reasoning under deep-model guidance. GiantMed uses a deep model to identify boundary medications and directs the LLM to focus on these clinically ambiguous yet informative cases. It further augments boundary-medication evidence by retrieving relevant historical EHRs and incorporating Drug–Drug Interaction (DDI) constraints. The final recommendation combines LLM-refined boundary medications with confident deep-model predictions.
-
-Experiments on two real-world EHR datasets show that GiantMed achieves state-of-the-art accuracy while reducing DDI rates.
+Accurate and safe medication recommendations from Electronic Health Records (EHRs) are essential for clinical decision support. While Large Language Models (LLMs) have shown strong semantic reasoning capabilities in healthcare, they tend to make coarse binary predictions, overlooking medications near the decision boundary and leading to overprescription. In contrast, deep models offer fine-grained probability outputs but lack the contextual reasoning needed for complex boundary cases. We propose GiantMed, a boundary-aware medication recommendation framework that activates LLM reasoning under deep-model guidance. GiantMed uses a deep model to identify boundary medications and directs the LLM to focus on these clinically ambiguous yet informative cases. It further augments boundary-medication evidence by retrieving relevant historical EHRs and incorporating Drug–Drug Interaction (DDI) constraints. The final recommendation combines LLM-refined boundary medications with confident deep-model predictions. Experiments on two real-world EHR datasets show that GiantMed achieves state-of-the-art accuracy while reducing DDI rates.
 
 ## Framework
 
