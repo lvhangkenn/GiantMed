@@ -569,7 +569,6 @@ if __name__ == '__main__':
     ddi_file = root + "drug-DDI.csv"
     drugbankinfo = root + "drugbank_drugs_info.csv"
     med_structure_file = root + "idx2SMILES.pkl"
-    noteevents = root + "NOTEEVENTS-001.csv"
 
     # output file
     ddi_adjacency_file = root_to + "ddi_A_final.pkl"
