@@ -65,8 +65,10 @@ python process.py
 data/
 └── raw/MIMIC-III/
     ├── DIAGNOSES_ICD.csv
+    ├── D_ICD_DIAGNOSES.csv
     ├── PRESCRIPTIONS.csv
     ├── PROCEDURES_ICD.csv
+    ├── D_ICD_PROCEDURES.csv
     ├── drug-atc.csv
     ├── drug-DDI.csv
     ├── idx2SMILES.pkl
