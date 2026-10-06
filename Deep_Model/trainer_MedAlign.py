@@ -44,9 +44,9 @@ class DrugTrainer():
         # print(self.data[0][0][:-2])
         # self.data=self.data[:][:][:-2][:]
         # self.data=self.data[:,:,:3,:]
-        for i in range(len(self.data)):
-            for j in range(len(self.data[i])):
-                self.data[i][j] = self.data[i][j][:3]
+        #for i in range(len(self.data)):
+        #   for j in range(len(self.data[i])):
+        #       self.data[i][j] = self.data[i][j][:3]
         # print(self.data)
         self.root = config["ROOT"]
         self.task = config["TASK"]
@@ -84,13 +84,18 @@ class DrugTrainer():
 
         # train-test split
         split_point = int(len(self.data) * self.ratio)
-        self.data_train, self.data_valid, self.data_test = train_test_split(self.data, split_point)
+        records_train, records_valid, records_test = train_test_split(self.data, split_point)
+        
+        self.data_train = [[visit[:3] for visit in patient] for patient in records_train]
+        self.data_valid = [[visit[:3] for visit in patient] for patient in records_valid]
+        self.data_test = [[visit[:3] for visit in patient] for patient in records_test]
+
         with open('../data/LLM-data/MIMIC-III/records_train.pkl', 'wb') as f:
-            pickle.dump(self.data_train, f)
+            pickle.dump(records_train, f)
         print("Saving records_train.pkl is OK")
 
         with open('../data/LLM-data/MIMIC-III/records_valid.pkl', 'wb') as f:
-            pickle.dump(self.data_valid, f)
+            pickle.dump(records_valid, f)
         print("Saving records_valid.pkl is OK")
 
 
