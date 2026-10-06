@@ -40,7 +40,7 @@ def parse_args() -> argparse.Namespace:
     p.add_argument("--ndc-atc", type=Path,
                    default=Path("../data/raw/MIMIC-III/ndc2atc_level4.csv"))
     p.add_argument("--ndc-rxcui", type=Path,
-                   default=Path("../data/raw/MIMIC-III/ndc2rxnorm_mapping.txt"))
+                   default=Path("../data/raw/MIMIC-III/ndc2RXCUI.txt"))
     p.add_argument("--prescriptions", type=Path,
                    default=Path("../data/raw/MIMIC-III/PRESCRIPTIONS.csv"))
     p.add_argument("--diagnoses-icd", type=Path,
