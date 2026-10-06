@@ -554,8 +554,8 @@ def filter_failure(my_dict):
 
 
 if __name__ == '__main__':
-    root = "raw/MIMIC-III"
-    root_to = "ready/MIMIC-III"
+    root = "raw/MIMIC-III/"
+    root_to = "ready/MIMIC-III/"
     print("=================Start!=================")
     # input file
     med_file = root + "PRESCRIPTIONS.csv"
